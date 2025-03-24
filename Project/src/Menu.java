@@ -250,7 +250,7 @@ public class Menu extends JFrame{
         }
 
         // update data di database
-        String sql = "UPDATE mahasiswa SET nim = '" + nim + "', nama = '" + nama + "', jenis_kelamin = '" + jenisKelamin + "', kelas = '" + kelas + "' WHERE nim = " + nim;
+        String sql = "UPDATE mahasiswa SET nim = '" + nim + "', nama = '" + nama + "', jenis_kelamin = '" + jenisKelamin + "', kelas = '" + kelas + "' WHERE nim = " + mahasiswaTable.getValueAt(selectedIndex, 1);
         database.insertUpdateDeleteQuery(sql);
 
         // update tabel
@@ -268,7 +268,8 @@ public class Menu extends JFrame{
     public void deleteData() {
         // tampilkan konfirmasi sebelum menghapus
         int confirmation = JOptionPane.showConfirmDialog(null, "Apakah Anda yakin ingin menghapus data ini?", "Konfirmasi Hapus", JOptionPane.YES_NO_OPTION);
-        String nim = nimField.getText();
+
+        String nim = mahasiswaTable.getModel().getValueAt(selectedIndex, 1).toString();
         if (confirmation == JOptionPane.YES_OPTION) {
             // hapus data di database
             String sql = "DELETE FROM mahasiswa WHERE nim = " + nim;
