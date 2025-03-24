@@ -60,7 +60,6 @@ Saat program dijalankan, pengguna akan melihat interface yang terdiri dari:
 - Program memastikan semua field terisi sebelum melakukan operasi database.
 - Validasi NIM unik untuk mencegah duplikasi.
 - Konfirmasi sebelum menghapus data untuk mencegah penghapusan yang tidak diinginkan.
-- Penanganan error database dengan try-catch untuk menjaga stabilitas aplikasi.
 
 ### 5. Struktur Penyimpanan Data  
 - Data mahasiswa disimpan secara permanen dalam database MySQL `db_mahasiswa` dalam tabel `mahasiswa`.
@@ -71,7 +70,6 @@ Saat program dijalankan, pengguna akan melihat interface yang terdiri dari:
 - Program membuat koneksi ke database saat aplikasi dimulai.
 - Query database dieksekusi sesuai dengan interaksi pengguna.
 - Data hasil query diproses dan ditampilkan dalam interface pengguna.
-- Koneksi database dikelola untuk mencegah kebocoran sumber daya.
 
 ## Dokumentasi
 ### Dialog/prompt error jika masih ada input yang kosong saat insert/update.
